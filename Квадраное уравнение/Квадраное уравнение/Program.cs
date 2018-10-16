@@ -27,18 +27,18 @@ namespace ConsoleApplication1
                             {
                                 x1 = (-b + (Math.Sqrt(D))) / (2 * a);
                                 x2 = (-b - (Math.Sqrt(D))) / (2 * a);
-                                Console.WriteLine("x1={0}, x2={1}", x1, x2);
+                                Console.WriteLine("x1={0}, x2={1}", x1, x2); //2 корня
                             }
-                            else { Console.WriteLine("Нет действительных корней"); }
+                            else { Console.WriteLine("Нет действительных корней"); } //нет
                         }
-                        else { x1 = -b / (2 * a); Console.WriteLine("x={0}", x1); }
+                        else { x1 = -b / (2 * a); Console.WriteLine("x={0}", x1); } //1 корень
                     }
-                    else { x1 = 0; x2 = -b / a; Console.WriteLine("x1={0}, x2={1}", x1, x2); }
+                    else { x1 = 0; x2 = -b / a; Console.WriteLine("x1={0}, x2={1}", x1, x2); } //2 корня
                 }
                 else
                 {
-                    if ((-c / a) >= 0) { x1 = -Math.Sqrt(-c / a); x2 = Math.Sqrt(-c / a); Console.WriteLine("x1={0}, x2={1}", x1, x2); }
-                    else { Console.WriteLine("Нет действительных корней"); }
+                    if ((-c / a) >= 0) { x1 = -Math.Sqrt(-c / a); x2 = Math.Sqrt(-c / a); Console.WriteLine("x1={0}, x2={1}", x1, x2); } //2 корня
+                    else { Console.WriteLine("Нет действительных корней"); } //нет 
                 }
             }
             else
@@ -46,9 +46,10 @@ namespace ConsoleApplication1
                 if (b != 0)
                 {
                     x1 = -c / b;
-                    Console.WriteLine("x={0}", x1);
+                    Console.WriteLine("x={0}", x1); //1 корень
                 }
-                else { if (c != 0) Console.WriteLine("нет решений"); else Console.WriteLine("Х-любое"); }
+                else { if (c != 0) Console.WriteLine("нет решений"); //нет
+                        else Console.WriteLine("Х-любое"); }//любое
             }
             Console.ReadLine();
         }
